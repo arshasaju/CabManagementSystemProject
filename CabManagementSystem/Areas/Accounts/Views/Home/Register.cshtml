@@ -1,0 +1,83 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+@*<h1>Register</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <form method="post">
+                
+                <div class="d-grid mt-4">
+                    <button class="btn btn-primary">Register</button>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>*@
+
+
+
+
+
+    <div class="one">
+    <h1 style="margin-left:490px;color:goldenrod;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">REGISTER</h1>
+  </div>
+
+
+  <section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+       @* <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="css/download.png"
+            class="img-fluid" alt="Sample image" style="margin-left: 13%;">
+        </div>*@
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <form method="post">
+
+
+                    <div>
+                        <label asp-for="FirstName" style="color:aliceblue"></label>
+                        <input asp-for="FirstName" class="form-control" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="LastName" style="color:aliceblue"></label>
+                        <input asp-for="LastName" class="form-control" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="UserTypes" style="color:aliceblue"></label>
+                        <select asp-for="UserTypes" asp-items="@Html.GetEnumSelectList<UserType>()" class="form-control">
+                            <option>Select User Type</option></select>
+                    </div>
+                    <div>
+                        <label asp-for="Email" style="color:aliceblue"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Password" style="color:aliceblue"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="ConfirmPassword" style="color:aliceblue"></label>
+                        <input asp-for="ConfirmPassword" class="form-control" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <div class="d-grid mt-4">
+                        <button class="glow-on-hover btn-warning" style="width:350px">Register</button>
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    </div>
+                    
+              
+                
+  
+          </form>
+        </div>
+      </div>
+    </div> 
+  </section>

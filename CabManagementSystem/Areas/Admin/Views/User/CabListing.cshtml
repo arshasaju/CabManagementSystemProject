@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Cab>
+@{
+    ViewData["Title"] = "CabListing";
+}
+
+<h1 class="text-warning" style="margin-left:440px">CabListing</h1>
+
+<div class="container">
+    <div class="container-fluid">
+        @if (Model.Any())
+        {
+            <div class="row">
+
+
+                <table class="table table-striped">
+                    <tr>
+                        @*<th>Driver Name</th>*@
+                        <th class="text-success">Vehicle Number</th>
+                        <th class="text-success">Type</th>
+                        <th class="text-success">Model</th>
+                        <th class="text-success"></th>
+                        <th class="text-success"></th>
+
+
+                    </tr>
+                    @foreach (var cab in Model)
+                    {
+                        <tr>
+                            @*<td>@cab.ApplicationUser.FirstName @cab.ApplicationUser.LastName</td>*@
+                            <td class="text-white">@cab.VehicleNumber</td>
+                            <td class="text-white">@cab.VehicleType</td>
+                            <td class="text-white">@cab.VehicleModel</td>
+                            <td class="text-white" style="padding : 0px; margin : 0px ; width: 80px"><a asp-action="VerifyCab1" asp-route-id="@cab.VehicleNumber" class="btn btn-primary" style="width:80px" onclick="this.text=" Varified"">Verify</a></td>
+                            <td class="text-white" style="padding : 0px; margin : 0px"><a asp-action="VehicleDelete" asp-route-id="@cab.Id" class="btn btn-danger" style="width:80px" onclick="return confirm('Do You Want To Delete the cab')">Delete</a></td>
+                        </tr>
+                    }
+                </table>
+
+
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-info">
+                No cabs were found.
+            </div>
+        }
+    </div>
+</div>

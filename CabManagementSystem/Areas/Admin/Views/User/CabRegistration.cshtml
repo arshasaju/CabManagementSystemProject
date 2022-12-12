@@ -1,0 +1,46 @@
+﻿@model CabManagementSystem.Models.ViewModels.CabRegistrationViewModel
+
+@{
+    ViewData["Title"] = "CabRegistration";
+}
+
+<h1 class="text-warning">CabRegistration</h1>
+
+@*<h4>Cab</h4>*@
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CabRegistration" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="VehicleNumber" class="control-label text-white" ></label>
+                <input asp-for="VehicleNumber" class="form-control" />
+                <span asp-validation-for="VehicleNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VehicleType" class="control-label text-white"></label>
+                <select asp-for="VehicleType" class="form-control" asp-items="@Html.GetEnumSelectList<VehicleType>()">
+                    <option>
+                        ----Select----
+                    </option>
+                </select>
+                <span asp-validation-for="VehicleType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VehicleModel" class="control-label text-white"></label>
+                <input asp-for="VehicleModel" class="form-control" />
+                <span asp-validation-for="VehicleModel" class="text-danger"></span>
+            </div>
+   
+            <div class="form-group"><br />
+                <input type="submit" value="Register Cab" class="btn btn-warning" />
+
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,70 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+@*<h1>Login</h1>*@
+
+@*<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <form method="post">
+                <div>
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="d-grid mt-4">
+                    <button class="btn btn-primary">Login</button>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+*@
+
+<div class="one">
+    <h1 style="margin-left:470px;color:gold;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">LOGIN</h1>
+</div>
+
+
+
+<section class="vh-100" style="background-image:src("https://assets.justinmind.com/wp-content/uploads/2019/09/flat-website-ui-design-landerapp.png")" >
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-8 col-xl-5" style="margin-left:-36.666667%">
+                
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" style="margin-top:70px">
+                <form method="post" style="margin-right: 17px;margin-left: -107px;">
+                    <div>
+                        <label asp-for="Email" style="color:aliceblue"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Password" style="color:aliceblue"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    @*<div class="d-grid mt-4">
+                        <button class="btn btn-primary">Login</button>
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    </div>*@
+                    <div class="d-grid mt-4">
+                        <button class="glow-on-hover btn-warning" style="width:438px">Login</button>
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+
